@@ -1,0 +1,36 @@
+#Lec 7
+
+If it was a function with some parameter we use anonymous function so that its not invoked as page loads*/
+const handleClickAgain = (name) => {
+console.log("Hello " + name);
+}
+<button onClick={() => {handleClickAgain("Prashant")}}>Click me Again</button> */}
+
+
+#Lec 8
+
+const [name,setName] = useState('mario');
+const handleClick = () => {
+    setName('luigi');
+    console.log(name);
+}
+<p>{ name }</p>
+<button onClick={handleClick}>Click Me</button>
+
+
+#Lec 12
+
+<BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs"/>
+
+
+#Lec 14 + 15
+
+useEffect is used if we want to re render the data. 
+
+useEffect(() => {
+    something....
+}, dependencyArray)
+
+if dependencyArray is not given: useEffect re renders for every change
+if dependencyArray is [] : useEffect runs when page loads for first time 
+if dependencyArray is [dependency] : useEffect run when page loads and for that dependency
