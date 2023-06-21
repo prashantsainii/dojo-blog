@@ -3,17 +3,11 @@ import BlogList from "./BlogList";
 const Home = () => {
     const { data:blogs, isPending, Error } = useFetch('http://localhost:8000/blogs');
 
-    // const handleDelete = (id) => {
-    //     const newBlogs = blogs.filter(blog => blog.id !== id);
-    //     setBlogs(newBlogs);
-    // }
-    
     return (
         <div className="home">
-            { Error && <div>{Error}</div> }
-            { isPending && <div>Loading...</div> }
+            { Error && <div> {Error} </div> }
+            { isPending && <div> Loading... </div> }
             { blogs && <BlogList blogs={blogs} title="All Blogs" /> }
-
         </div>
     );
 }
