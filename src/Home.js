@@ -7,7 +7,7 @@ const Home = () => {
         <div className="home">
             { Error && <div> {Error} </div> }
             { isPending && <div> Loading... </div> }
-            { blogs && <BlogList blogs={blogs} title="All Blogs" /> } {/*Passed as props */}
+            { blogs && <BlogList blogs={blogs} title="All Blogs" /> } {/*Passed as props*/}
         </div>
     );
 }
